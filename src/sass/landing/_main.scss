@@ -1078,8 +1078,11 @@ button.slick-prev {
   }
 }
 
-
-
+@media (min-width: 410px) {
+  .promo__desc {
+    padding-right: 114px;
+  }
+}
 
 
 
