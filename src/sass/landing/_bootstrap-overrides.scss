@@ -1,0 +1,34 @@
+$btn-link-color: #fff;
+$btn-link-text-decoration: none;
+
+@mixin reset-bootstrap-link-hover($color, $decoration) {
+    &.focus {
+        color: $color; 
+        text-decoration: $decoration;
+    }
+    &:focus {
+        color: $color; 
+        text-decoration: $decoration;
+    }
+    &:hover {
+        color: $color; 
+        text-decoration: $decoration;
+    }
+}
+
+body {
+    line-height: initial;
+}
+
+ol, ul {
+    margin-bottom: 0px;
+}
+
+a {
+    @include reset-bootstrap-link-hover($btn-link-color, $btn-link-text-decoration);
+}
+
+.btn {
+    padding: 0px;
+    @include reset-bootstrap-link-hover($btn-link-color, $btn-link-text-decoration);
+}

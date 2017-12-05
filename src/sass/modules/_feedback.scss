@@ -1,0 +1,113 @@
+@mixin feedback-form{
+    &__form{
+        color: #fff;
+        width: 325px;
+        background-color: #0c6eb9;
+        padding: 9px 24px;
+        position: fixed;
+        right: 0;
+        bottom: 10px;
+        z-index: 100;
+        input{
+            display: block;
+            width: 100%;
+            background: transparent;
+            -webkit-border-radius: 0px;
+            border-radius: 0px;
+            border: none;
+            border-bottom: 2px solid #fff;
+            margin-bottom: 25px;
+            color: #fff;
+            line-height: 30px;
+        }
+        textarea{
+            display: block;
+            width: 100%;
+            background: transparent;
+            -webkit-border-radius: 0px;
+            border-radius: 0px;
+            border: none;
+            border-bottom: 2px solid #fff;
+            resize: none;
+            height: 125px;
+            color: #fff;
+            line-height: 30px;
+        }
+        button{
+            border: none;
+            height: 44px;
+            line-height: 44px;
+            margin-top: 30px;
+            width: 143px;
+            margin-bottom: 20px;
+        }
+    }
+    &__form-ttl{
+        color: white;
+        font-family: "Roboto Slab";
+        _font-size: 25px;
+        font-weight: 700;
+        position: relative;
+        cursor: pointer;
+        &:hover{
+            &:before{
+                top: 5px;
+            }
+        }
+        &:before{
+            position: absolute;
+            content: '';
+            background: url(../images/svg/arrow-popUp-up.svg) center no-repeat;
+            width: 20px;
+            height: 13px;
+            right: 0;
+            top: 12px;
+            transition: all .2s;
+        }
+        &.opened{
+            margin-top: 10px;
+            &:before{
+                transform: rotate(180deg);
+            }
+            &:hover{
+                &:before{
+                    top: 17px;
+                }
+            }
+        }
+    }
+    &__form-hide{
+        display: none;
+
+    }
+    &__form-desc{
+        color: white;
+        _font-size: 15px;
+        line-height: 28px;
+        margin-bottom: 25px;
+        margin-top: 30px;
+        position: relative;
+        &:before{
+            position: absolute;
+            content: '';
+            width: 66px;
+            height: 3px;
+            background-color: white;
+            top: -21px;
+            left: 0;
+
+        }
+    }
+    &__form-alternatives {
+        margin-top: 15px;
+        _font-size: 12px;
+        a {
+            color: #fff;
+            text-decoration: underline;
+            &:hover {
+                color: #fff;
+                text-decoration: underline;
+            }
+        }
+    }
+}
