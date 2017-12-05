@@ -528,7 +528,7 @@
 @media (min-width: 768px) {
   .resume, .talent, .method {
     &__item {
-      font-size: 16px;
+      font-size: 18px;
       line-height: 28px;
       margin-top: 50px;
       width: 40%;
@@ -1513,3 +1513,8 @@ button.slick-prev {
         }
     }
 }
+
+::-webkit-input-placeholder {color:#eaeaea;}
+::-moz-placeholder          {color:#eaeaea;}/* Firefox 19+ */
+:-moz-placeholder           {color:#eaeaea;}/* Firefox 18- */
+:-ms-input-placeholder      {color:#eaeaea;}
