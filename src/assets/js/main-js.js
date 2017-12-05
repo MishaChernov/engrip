@@ -10,7 +10,7 @@ $('.recommended__list').slick({
  responsive: [{
      breakpoint: 1190,
      settings: {
-       slidesToShow: 3,
+       slidesToShow: 2,
        slidesToScroll: 1,
      }
    },
