@@ -119,8 +119,9 @@
         overflow: hidden;
         .bg{
             background-color: #1481d5;
-            background: linear-gradient(to bottom, #1481d5 0%,#1a92ed 100%);
+            background-image: url("../img/fon.jpg");
             background-size: cover;
+            background-repeat: no-repeat;
             position: absolute;
             content: '';
             top: 50px;
