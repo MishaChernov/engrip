@@ -279,6 +279,17 @@
   }
 }
 
+@media (max-width: 992px) {
+  .promo {
+    &__container {
+      background-image: url("../img/bg-header-mob.png");
+      background-repeat: no-repeat;
+      background-size: 30%;
+      background-position: right 112%;
+    }
+  }
+}
+
 @media (min-width: 992px) {
   .promo {
     &__text {
@@ -615,6 +626,19 @@
           bottom: 5px;
         }
     }
+    &__footer {
+      bottom: 0;
+      top: -30px;
+
+      &::before {
+        content: "↑";
+      }
+      &:hover {
+        &::before {
+          top: -5px;
+        }
+      }
+    }
 }
 
 @media (max-width: 768px) {
@@ -831,6 +855,7 @@
 
 
 .benefits {
+  position: relative;
   padding: 70px 0;
 
   &__list {
@@ -890,6 +915,15 @@
   }
 }
 
+@media (min-width: 768px) {
+  .benefits__bg {
+    background-image: url("../img/bg-benefits.png");
+    background-position: right top;
+    background-repeat: no-repeat;
+    background-size: auto;
+  }
+}
+
 .useful {
   position: relative;
   padding: 70px 0;
@@ -941,9 +975,32 @@
     background: #f7f7f7;
   }
   .useful {
-
     &__link {
-      padding-top: 110px;
+      padding-top: 120px;
+      &:last-child {
+        padding-top: 90px;
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .useful {
+    &__link {
+      &:last-child {
+        padding-top: 110px;
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+
+  .useful {
+    &__link {
+      &:last-child {
+        padding-top: 120px;
+      }
     }
   }
 }
@@ -961,32 +1018,47 @@
     font-size: 0;
     width: 250px;
     height: 140px !important;
-    border-right: 1px solid #e6e6e6;
     background-position: center;
     background-repeat: no-repeat;
 
     &:last-child {
       border-right: none;
     }
-    &:nth-child(1) {
+    &--durham {
       background-image: url("../img/college-1.png");
     }
-    &:nth-child(2) {
+    &--cuyamaca {
       background-image: url("../img/college-2.png");
     }
-    &:nth-child(3) {
+    &--luzerne {
       background-image: url("../img/college-3.png");
     }
-    &:nth-child(4) {
+    &--gordon {
       background-image: url("../img/college-4.png");
     }
-    &:nth-child(5) {
+    &--niagara {
       background-image: url("../img/college-5.png");
     }
-    &:nth-child(6) {
+    &--college {
       background-image: url("../img/college-6.png");
     }
   }
+}
+
+.recommended {
+  &__link {
+    @media (min-width: 1190px) {
+      border-right: 1px solid #e6e6e6;
+    }
+  }
+}
+
+button.slick-next {
+  right: -5px;
+}
+
+button.slick-prev {
+  left: -5px;
 }
 
 button.slick-next,
@@ -1192,7 +1264,7 @@ button.slick-prev {
         margin-top: 208px;
         >li{
             display: inline-block;
-            margin-right: 61px;
+            margin-right: 50px;
             &:last-child{
                 margin-right: 0;
             }
@@ -1279,9 +1351,40 @@ button.slick-prev {
     &__form{
         position: absolute;
         bottom: 140px;
+        &-hide {
+          display: none;
+        }
+        &-visibility {
+          display: block;
+        }
     }
 }
 
+.main-footer__form-ttl {
+  position: relative;
+  &:hover {
+    opacity: 0.8;
+  }
+  &::after {
+    position: absolute;
+    bottom: -5px;
+    right: 0px;
+    display: inline;
+    font-family: "Roboto Slab", "Roboto", serif;
+    font-size: 25px;
+    color: #ffffff;
+  }
+  &.main-footer__form-ttl--hide {
+    &::after {
+      content: "▲";
+    }
+  }
+  &.main-footer__form-ttl--visibility {
+    &::after {
+      content: "▼";
+    }
+  }
+}
 
 @media only screen and (max-width: 1199px){
     .main-footer{
@@ -1373,7 +1476,6 @@ button.slick-prev {
             margin-top: 15px;
         }
         &__form{
-            left: 0;
             width: 100%;
             bottom: 100%;
             padding: 11px 24px;

@@ -9,3 +9,9 @@
     z-index: 3;
     margin-top: 15px;
 }
+
+@media (min-width: 1199px) {
+  .copyright{
+    margin-top: 0;
+  }
+}
